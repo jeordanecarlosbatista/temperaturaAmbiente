@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar color="ocean">
+    <ion-title class="menu-center">Regar Planta</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content (swipe)="deslizar($event)" padding> 
+
+  <!--   <button ion-button block class="botao" (tap)="regarAPlanta()" color="ocean">Regar Planta</button> -->
+  <button ion-button icon-start class="botao" block (tap)="regarPlanta()" color="ocean">
+    <ion-icon name="ios-water"></ion-icon>
+    Regar Planta
+  </button>
+  <button ion-button icon-start class="botao" block (tap)="getStatusPlanta()" color="ocean">
+      <ion-icon name="ios-water"></ion-icon>
+    Atualizar Planta
+    </button>
+  <h1 class="{{statusPlanta.class}}">{{statusPlanta.text}}</h1>
+</ion-content>

@@ -1,0 +1,30 @@
+.menu-center {
+  text-align: center;
+}
+
+.botao {
+  min-height: 45px;
+  margin-top: 20px;
+  box-shadow: 0px 6px 10px #999999 !important;
+}
+
+.master {
+  background-color: #f2f2f2;
+}
+
+$margin:2px;
+.cartao {
+  margin-bottom: $margin;
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)!important;
+}
+
+.tabs-positive>.tabs {
+  background-color: red !important;
+}
+
+.center {
+  text-align: center;
+}

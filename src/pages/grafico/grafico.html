@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar color="ocean">
+    <ion-title class="menu-center">Gŕaficos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div padding>
+    <ion-item>
+      <ion-label color="ocean" stacked>Quantidade de dias</ion-label>
+      <ion-input [(ngModel)]="dias" (ionChange)="restringirInput()" type="number"></ion-input>
+    </ion-item>
+    <button (tap)="buscarDados()" class="botao" ion-button block>Buscar dados</button>
+  </div>
+
+  <div class="divisor"></div>
+
+  <div class="master">
+    <ion-card class="cartao">
+      <div style="display: block">
+        <ion-card-content>
+            <canvas #graficoLotacao height="300" baseChart
+            [data]="lineChartData"
+            [colors]="lineChartColors"
+            [labels]="lineChartLabels"
+            [options]="lineChartOptions"
+            [chartType]="lineChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+        </ion-card-content> 
+      </div>
+    </ion-card>
+    <div padding></div>
+  </div>
+</ion-content>

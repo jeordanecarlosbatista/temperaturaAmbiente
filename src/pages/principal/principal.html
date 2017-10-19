@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="ocean">
+    <ion-title class="menu-center">Painel Principal</ion-title>
+    <ion-buttons end>
+      <button (tap)="abrirConfiguracoes()" color="light" ion-button icon-only>
+        <ion-icon name="md-settings"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="master">
+
+  <ion-card class="cartao" *ngFor="let item of historico">
+      <ion-item>
+        <ion-avatar item-start>
+          <img class="folha" src="assets/svg/leaf.svg">
+        </ion-avatar>
+        <h2>Planta Regada</h2>
+        <p>
+          <!-- 10 de Junho, 2017 -->
+          {{item.DataCadastro | date: 'dd/MM/yyyy'}}
+        </p>
+      </ion-item>
+    </ion-card>
+</ion-content>
